@@ -29,11 +29,11 @@ module "eks" {
   eks_managed_node_groups = {
     default = {
       name           = "${var.project}-ng"
-      instance_types = ["t3.medium"]
+      instance_types = ["m7i-flex.large"]
 
-      min_size     = 3
+      min_size     = 2
       max_size     = 5
-      desired_size = 3
+      desired_size = 2
 
       subnet_ids = local.private_subnet_ids
 
